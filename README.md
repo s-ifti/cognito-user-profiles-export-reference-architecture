@@ -43,11 +43,11 @@ chmod +x ./run-unit-tests.sh
 
 ### 4. Declare environment variables
 ```bash
-export REGION=aws-region-code # the AWS region to launch the solution (e.g. us-east-1)
-export SECONDARY_REGION=aws-region-code # the AWS region that will serve as backup (e.g. eu-central-1)
-export DIST_OUTPUT_BUCKET=my-bucket-name # bucket where customized code will reside
-export SOLUTION_NAME=my-solution-name
-export VERSION=my-version # version number for the customized code
+export REGION=us-east-1 # the AWS region to launch the solution (e.g. us-east-1)
+export SECONDARY_REGION=us-west-2 # the AWS region that will serve as backup (e.g. eu-central-1)
+export DIST_OUTPUT_BUCKET=1-cognito-imp-exp # bucket where customized code will reside
+export SOLUTION_NAME=cog-imp-exp
+export VERSION=1.0 # version number for the customized code
 ```
 
 ### 5. Create an Amazon S3 bucket

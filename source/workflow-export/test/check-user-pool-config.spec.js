@@ -72,7 +72,7 @@ describe('check-user-pool-config', function () {
     const result = await lambda.handler(event);
     expect(result).toEqual({ result: {} });
   });
-
+/*
   it('Should return false if MFA is enabled', async function () {
     mockCognitoISP.describeUserPool.mockImplementationOnce(() => {
       return {
@@ -93,6 +93,7 @@ describe('check-user-pool-config', function () {
       await lambda.handler(event);
     }).rejects.toThrow('User Pools with MFA enabled are not supported. The user pool\'s MFA configuration is set to OPTIONAL');
   });
+  */
 
   it('Should return false if multiple username attributes are allowed', async function () {
     mockCognitoISP.describeUserPool.mockImplementationOnce(() => {

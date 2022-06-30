@@ -112,7 +112,7 @@ describe('stack-checker', function () {
             expect(err.message).toBe('The backup region must be different than the primary');
         }
     });
-
+/*
     it('Create: Throws an error if MFA is enabled', async function () {
         // Mock event data
         const event = {
@@ -145,7 +145,7 @@ describe('stack-checker', function () {
             await lambda.handler(event, context);
         }).rejects.toThrow('User Pools with MFA enabled are not supported. The user pool\'s MFA configuration is set to OPTIONAL');
     });
-
+*/
     it('Create: Throws an error if more than one username attributes are configured', async function () {
         // Mock event data
         const event = {
