@@ -56,7 +56,7 @@ exports.handler = async (event, context) => {
                 cognitoApiCallCount++;
 
                 if (response.Users && response.Users.length > 0) {
-                    const nonExternalUsers = response.Users.filter(user => user.UserStatus !== 'EXTERNAL_PROVIDER');
+                    const nonExternalUsers = response.Users;//.filter(user => user.UserStatus !== 'EXTERNAL_PROVIDER');
 
                     if (nonExternalUsers.length > 0) {
                         const numUsersReturned = nonExternalUsers.length;

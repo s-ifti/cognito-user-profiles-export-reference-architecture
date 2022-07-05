@@ -138,7 +138,7 @@ async function listCognitoUsers(paginationToken, context) {
 
   if (cognitoResponse.Users && cognitoResponse.Users.length > 0) {
     return {
-      users: cognitoResponse.Users.filter(user => user.UserStatus !== 'EXTERNAL_PROVIDER'),
+      users: cognitoResponse.Users/*.filter(user => user.UserStatus !== 'EXTERNAL_PROVIDER')*/,
       paginationToken: cognitoResponse.PaginationToken
     };
   }
